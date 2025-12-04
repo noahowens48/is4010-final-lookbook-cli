@@ -2,9 +2,10 @@
 
 A simple Python command-line app that lets you store clothing items and automatically generate outfits based on season and vibe. It helps you organize your wardrobe and quickly put together fits.
 
-![Tests](https://github.com/USERNAME/is4010-final-lookbook-cli/actions/workflows/tests.yml/badge.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)
+![Tests](https://github.com/noahowens48/is4010-final-lookbook-cli/actions/workflows/tests.yml/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -19,8 +20,8 @@ A simple Python command-line app that lets you store clothing items and automati
 ## Installation
 
 1. Clone the repository:
-   git clone https://github.com/USERNAME/is4010-final-lookbook-cli
-   cd is4010-final-lookbook-cli
+  git clone https://github.com/noahowens48/is4010-final-lookbook-cli
+cd is4010-final-lookbook-cli
 2. Create and activate a virtual environment:
 python3 -m venv venv
 source venv/bin/activate
@@ -61,29 +62,21 @@ Fully tested with pytest
 
 GitHub Actions CI pipeline to run tests on every push
 
+
+
 ## Testing
+
 Run the full test suite:
 
 ```bash
 pytest
-```
-Verbose mode:
 
+For verbose mode:
 pytest -v
+yaml
+Copy code
 
-**For Rust:**
-```markdown
-## Testing
-
-Run the test suite:
-
-```bash
-cargo test
-```
-All tests must pass locally and in GitHub Actions.
-
-
-### AI-Assisted Development
+## AI-Assisted Development
 
 I used AI tools throughout this project mainly to help me think through the structure, debug errors faster, and write cleaner code.
 
