@@ -2,7 +2,7 @@
 
 A command-line tool that lets you store clothing items, filter them, and automatically generate full outfits based on season + vibe. I built this as my IS4010 Final Project to show I can design, test, and ship a real CLI application.
 
-[![Tests](https://github.com/noahowens48/is4010-final-lookbook-cli/actions/workflows/tests.yml/badge.svg)](https://github.com/noahowens48/is4010-final-lookbook-cli/actions/workflows/tests.yml)
+![Tests](https://github.com/noahowens48/is4010-final-lookbook-cli/actions/workflows/tests.yml/badge.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)
 
