@@ -1,11 +1,12 @@
-# Lookbook CLI
+# Lookbook CLI – Outfit Generator
 
-A simple Python command-line app that lets you store clothing items and automatically generate outfits based on season and vibe. It helps you organize your wardrobe and quickly put together fits.
+A command-line tool that lets you store clothing items, filter them, and automatically generate full outfits based on season + vibe. I built this as my IS4010 Final Project to show I can design, test, and ship a real CLI application.
 
-![Tests](https://github.com/noahowens48/is4010-final-lookbook-cli/actions/workflows/tests.yml/badge.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Tests](https://github.com/noahowens48/is4010-final-lookbook-cli/actions/workflows/tests.yml/badge.svg)](https://github.com/noahowens48/is4010-final-lookbook-cli/actions/workflows/tests.yml)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)
 
+---
 
 ## Table of Contents
 - [Installation](#installation)
@@ -19,84 +20,87 @@ A simple Python command-line app that lets you store clothing items and automati
 
 ## Installation
 
-1. Clone the repository:
-  git clone https://github.com/noahowens48/is4010-final-lookbook-cli
+1. Clone the repo:
+```bash
+git clone https://github.com/noahowens48/is4010-final-lookbook-cli
 cd is4010-final-lookbook-cli
+```
+
 2. Create and activate a virtual environment:
+```bash
 python3 -m venv venv
 source venv/bin/activate
-3. Install dependencies:
-pip install -r requirements.txt
+```
 
-## Usage 
-1. Add an item:
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+
+### Add a clothing item
+```bash
 python -m lookbook add-item \
   --name "Black Hoodie" \
   --category top \
-  --color black \
   --season winter \
   --vibe streetwear
-2. List items (with filters): python -m lookbook list-items --season winter --vibe streetwear
-3. Generate an outfit: 
+```
+
+### List items by season + vibe
+```bash
+python -m lookbook list-items --season winter --vibe streetwear
+```
+
+### Generate an outfit
+```bash
 python -m lookbook generate --season winter --vibe streetwear
-Sample output:
+```
+
+Example output:
+```
 🎲 Generated outfit:
 - Top ID: 1
 - Bottom ID: 2
 - Shoes ID: 3
+```
 
-## Features:
-Add clothing items (top, bottom, shoes, etc.)
+---
 
-Store season + vibe to match your personal style
+## Features
 
-Filter items by category, season, or vibe
+- Add & store clothing items locally  
+- Filter items by category, season, or vibe  
+- Automatically assemble an outfit (top + bottom + shoes)  
+- Save generated outfits  
+- JSON-based storage  
+- Fully tested using pytest  
+- Automated CI/CD pipeline using GitHub Actions  
 
-Automatically generate a full outfit
-
-Save generated outfits locally
-
-Clean JSON-based storage
-
-Fully tested with pytest
-
-GitHub Actions CI pipeline to run tests on every push
-
-
+---
 
 ## Testing
 
 Run the full test suite:
-
 ```bash
-pytest
-
-For verbose mode:
 pytest -v
-yaml
-Copy code
+```
+
+---
 
 ## AI-Assisted Development
 
-I used AI tools throughout this project mainly to help me think through the structure, debug errors faster, and write cleaner code.
+I used ChatGPT to brainstorm the project idea, outline my file structure, and break the build into steps. I also used it to help me understand how to organize a Python CLI app and how to structure filtering, storage, and generation logic.
 
-ChatGPT: I used it for brainstorming project ideas, outlining the architecture, and getting examples of how to structure a Python CLI. I also used it when I got stuck on errors.
+I used GitHub Copilot inside VS Code for writing repetitive code faster, filling in boilerplate, suggesting function layouts, and helping debug when things weren’t working right. All final decisions and code were written, reviewed, and tested by me.
 
-GitHub Copilot: I used it while writing most of the code. It helped with generating function skeletons, filling in repetitive logic, and speeding up test creation.
+For more details and specific prompts, see **AGENTS.md**.
 
-Example prompts I used:
-
-“Help me outline a Python CLI that stores clothing items and generates outfits.”
-
-“Why am I getting ImportError: cannot import name load_items?”
-
-“Write pytest tests for filtering logic that uses dataclasses.”
-
-Reflection:
-AI mainly helped me move faster. It didn’t replace my thinking, but it helped me understand the problem and get unstuck quicker. Copilot was good for writing boilerplate, and ChatGPT helped explain errors and design patterns. Sometimes AI gave code that didn’t fit my project, so I still had to adjust things manually.
-
-More detail is available in AGENTS.md.
+---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
